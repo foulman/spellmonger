@@ -1,0 +1,13 @@
+[
+  {
+    "type": "mutation",
+    "id": "WARMAGE",
+    "name": "Novice Warmage",
+    "points": 4,
+    "description": "You have graduated from the magical war college, not only are you a soldier, but a trained magi able to use magic for combat.",
+    "starting_trait": true,
+    "purifiable": false,
+	"mana_regen_multiplier": 0.50,
+	"mana_multiplier": 0.75
+  }
+]
