@@ -7,7 +7,7 @@
     "description": "Disguised by photomancy to appear nondescript, you are harder to notice at a distance.",
     "starting_trait": false,
     "stealth_modifier": 60,
-	"anger_relations": [ [ "ZOMBIE", -150 ] ]
+	"anger_relations": [ [ "ZOMBIE", -100 ] ]
   },
   {
     "id": "spm_concealment_item",
