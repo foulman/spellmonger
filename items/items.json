@@ -12,8 +12,19 @@
     "name": "Warmagi Marker",
     "description": "This is a placeholder object to determine what class you are for crafting purposes.  You can't drop it.",
     "volume": "1 ml",
-    "weight": "1 g",
     "qualities": [ [ "WM", 1 ] ],
+    "flags": [ "PERSONAL", "TRADER_AVOID", "NO_SALVAGE", "PSEUDO", "NO_TAKEOFF", "NO_REPAIR" ]
+  },
+  {
+    "id": "mage_marker",
+    "type": "TOOL_ARMOR",
+    "symbol": "*",
+    "color": "red",
+    "name": "Mage Marker",
+    "description": "This is a placeholder object to determine what class you are for crafting purposes.  You can't drop it.",
+    "volume": "1 ml",
+    "weight": "1 g",
+    "qualities": [ [ "MAGE", 1 ] ],
     "flags": [ "PERSONAL", "TRADER_AVOID", "NO_SALVAGE", "PSEUDO", "NO_TAKEOFF", "NO_REPAIR" ]
   },
   {
@@ -51,7 +62,7 @@
     "symbol": "*",
     "color": "light_green",
     "covers": [ "HEAD" ],
-    "flags": [ "LIGHT_10", "AURA", "SEMITANGIBLE" ]
+    "flags": [ "LIGHT_20", "AURA", "SEMITANGIBLE" ]
   },
   {
     "type": "TOOL",
@@ -60,20 +71,28 @@
     "price_postapoc": 500000,
     "name": { "str": "tiny irionite chip" },
     "symbol": "=",
-    "color": "light_gray",
+    "color": "light_green",
     "looks_like": "pebble",
-    "description": "A sliver of a translucent green amber of incredible potency.  Irionite can magnify the expression of a mage's power by several orders of magnitude.",
+    "description": "A sliver of a translucent green amber of incredible potency.  Irionite, or witchstone, can magnify the expression of a mage's power by several orders of magnitude.",
     "material": "glass",
-    "volume": "5 ml",
-    "weight": "3 g",
+    "volume": "1 ml",
+    "weight": "1 g",
 	"relic_data": {
       "passive_effects": [ { "has": "HELD", "condition": "ALWAYS", "values": [ { "value": "MAX_MANA", "multiply": 2 }, { "value": "REGEN_MANA", "multiply": 3 } ] } ]
     },
-    "effects": [ "NEVER_MISFIRES" ]
+	"use_action": [
+      {
+        "type": "cast_spell",
+        "spell_id": "spm_gather_mana",
+        "no_fail": true,
+        "need_wielding": false,
+        "level": 10
+      }
+    ]
   },
   {
-    "type": "ARMOR",
-    "id": "wm_spell_container",
+    "type": "TOOL_ARMOR",
+    "id": "spm_spell_container_novice",
     "name": { "str": "hung spell container" },
     "description": "This holds spells that are hung for later casting.",
     "symbol": "O",
@@ -81,43 +100,92 @@
     "volume": "1 ml",
     "weight": "1 g",
     "price": "3000 USD",
-    "flags": [ "TARDIS", "AURA" ],
+    "flags": [ "TARDIS", "AURA", "NO_TAKEOFF", "NO_SALVAGE", "NO_TRADE" ],
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
-        "moves": 0,
+        "moves": 1,
         "max_contains_volume": "500 L",
         "max_contains_weight": "1 kg",
-        "max_item_volume": "50 L",
-        "max_item_length": "3 meter",
+        "max_item_volume": "500 L",
+        "max_item_length": "12 meter",
         "spoil_multiplier": 0,
         "weight_multiplier": 0.0,
         "volume_multiplier": 0.0,
-        "rigid": false,
-        "magazine_well": "500 L",
-		"flag_restriction": [ "DANGEROUS" ]
+        "rigid": true,
+		"item_restriction": [ "spm_hung_force_bolt", "spm_hung_str_boost" ]
       }
     ]
   },
   {
-    "abstract": "wm_hung_spell",
+    "abstract": "spm_hung_spell",
     "type": "COMESTIBLE",
     "name": "hung spell template",
-    "category": "tools",	
-    "weight": "1 g",
-    "volume": "50 L",
-    "symbol": "h",
+    "category": "spells",
+	"comestible_type": "food",
+    "volume": "1 L",
+	"calories" : 0,
+	"spoils_in": "1 m",
+	"rot_spawn_chance": 100,
+    "rot_spawn": "GROUP_EGG_CHICKEN",
+	"symbol": "h",
 	"color": "pink",
-    "flags": [ "NO_SALVAGE", "NO_INGEST", "DANGEROUS", "TRADER_AVOID", "NUTRIENT_OVERRIDE" ]
+	"phase": "solid",
+    "flags": [ "NO_SALVAGE", "TRADER_AVOID", "NUTRIENT_OVERRIDE", "INEDIBLE" ]
   },
   {
-    "id": "wm_hung_str_boost",
-    "copy-from": "wm_hung_spell",
+    "id": "spm_hung_str_boost",
+    "copy-from": "spm_hung_spell",
     "type": "COMESTIBLE",
 	"name": { "str": "hung spell - Strength Boost" },
     "description": "A hung spell of Strength Boost.",
     "color": "white",
-    "use_action": { "type": "cast_spell", "spell_id": "wm_str_boost", "no_fail": true, "level": 1 }
+    "use_action": { "type": "cast_spell", "spell_id": "spm_str_boost", "no_fail": true, "level": 10, "moves": 200 }
+  },
+  {
+    "id": "spm_hung_force_bolt",
+    "copy-from": "spm_hung_spell",
+    "type": "COMESTIBLE",
+	"name": { "str": "hung spell - force bolt" },
+    "description": "A hung spell of force bolt.",
+    "color": "white",
+    "use_action": { "type": "cast_spell", "spell_id": "spm_force_bolt", "no_fail": true, "level": 10, "moves": 100 }
+  },
+  {
+    "id": "spm_hung_fire_bolt",
+    "copy-from": "spm_hung_spell",
+    "type": "COMESTIBLE",
+	"name": { "str": "hung spell - fire bolt" },
+    "description": "A hung spell of fire bolt.",
+    "color": "white",
+    "use_action": { "type": "cast_spell", "spell_id": "spm_fire_bolt", "no_fail": true, "level": 10, "moves": 100 }
+  },
+  {
+    "id": "spm_hung_shock_bolt",
+    "copy-from": "spm_hung_spell",
+    "type": "COMESTIBLE",
+	"name": { "str": "hung spell - shock bolt" },
+    "description": "A hung spell of shock bolt.",
+    "color": "white",
+    "use_action": { "type": "cast_spell", "spell_id": "spm_shock_bolt", "no_fail": true, "level": 10, "moves": 100 }
+  },
+  {
+    "id": "spm_hung_force_bolt_spray",
+    "copy-from": "spm_hung_spell",
+    "type": "COMESTIBLE",
+	"name": { "str": "hung spell - force bolt spray" },
+    "description": "A hung spell of force bolt spray.",
+    "color": "white",
+    "use_action": { "type": "cast_spell", "spell_id": "spm_force_bolt_spray", "no_fail": true, "level": 10, "moves": 100 }
+  },
+  {
+    "id": "spm_hung_blackfire_bolt",
+    "copy-from": "spm_hung_spell",
+    "type": "COMESTIBLE",
+	"name": { "str": "hung spell - blackfire bolt" },
+    "description": "A hung spell of blackfire bolt.",
+    "color": "white",
+    "use_action": { "type": "cast_spell", "spell_id": "spm_blackfire_bolt", "no_fail": true, "level": 10, "moves": 100 }
   }
   
 ]

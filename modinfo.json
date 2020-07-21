@@ -14,7 +14,7 @@
     "ident": "thaumaturgy",
     "name": "thaumaturgy",
     "display_category": "display_interaction",
-    "description": "Your skill and knowledge of not only the science of magic, but a scientific understanding of the universe, which is required to manipulate it."
+    "description": "Your skill and knowledge of not only the science of magic, but a scientific understanding of the universe, which is required to manipulate it properly."
   },
   {
     "type": "skill",
@@ -56,34 +56,27 @@
     "ident": "photomancy",
     "name": "photomancy",
     "display_category": "display_interaction",
-    "description": "Your skill and knowledge involving light and illusions."
+    "description": "Your skill and knowledge involving light, illusions, obfuscation, stealth, and even assassination."
   },
   {
     "type": "skill",
-    "ident": "hydromancy",
-    "name": "hydromancy",
+    "ident": "physiomancy",
+    "name": "physiomancy",
     "display_category": "display_interaction",
-    "description": "Your skill and knowledge involving water and ice."
+    "description": "Your skill and knowledge involving magic as applied to living bodies, health, healing, and diseases."
   },
   {
     "type": "skill",
-    "ident": "geomancy",
-    "name": "geomancy",
+    "ident": "warmagic",
+    "name": "warmagic",
     "display_category": "display_interaction",
-    "description": "Your skill and knowledge involving the element of earth."
+    "description": "Your skill and knowledge involving magic as applied to offensive and defensive actions in combat, harming, killing, and destroying foes and obstacles.  Not easy to learn outside of an Imperial War College."
   },
   {
     "type": "skill",
-    "ident": "umbramancy",
-    "name": "umbramancy",
+    "ident": "warding",
+    "name": "warding",
     "display_category": "display_interaction",
-    "description": "Your skill and knowledge involving magical obfuscation and stealth."
-  },
-  {
-    "type": "skill",
-    "ident": "biomancy",
-    "name": "biomancy",
-    "display_category": "display_interaction",
-    "description": "Your skill and knowledge involving magic as applied to health, healing, and diseases."
+    "description": "Your skill and knowledge involving magic as applied to enhancing and manipulating substances or areas, strengthening, preventing harmful events like fire, and protection."
   }
 ]
