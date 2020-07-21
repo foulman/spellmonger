@@ -162,7 +162,7 @@
   {
     "id": "spm_shock_bolt",
 	"type": "SPELL",
-	"name": "Force Bolt",
+	"name": "Shock Bolt",
 	"description": "This spell hurls a crackling bolt of electricity at your target.",
 	"message": "you cast %s, sending a crackling bolt of electricity slamming into your target!",
 	"valid_targets": [ "hostile", "ground", "ally" ],
@@ -511,26 +511,6 @@
 	"min_duration": 200,
     "max_duration": 500,
     "duration_increment": 50
-  },
-  {
-    "id": "spm_force_bolt_hang",
-    "type": "SPELL",
-    "name": "Hang Forcebolt",
-    "description": "This is the first spell any mage learns, designed to teach them to manipulate magic to accomplish many minor tasks with a minimum of effort.  Eventually this becomes reflexive and you can simply do things at will with no spell casting required, just using background mana.",
-    "valid_targets": [ "self" ],
-    "effect": "spawn_item",
-    "effect_str": "spm_hung_force_bolt",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "PERMANENT", "NO_FAIL" ],
-    "energy_source": "MANA",
-	"skill": "thaumaturgy",
-    "base_casting_time": 1500,
-    "final_casting_time": 1500,
-    "base_energy_cost": 300,
-    "final_energy_cost": 300,
-    "difficulty": 1,
-    "max_level": 1,
-    "min_damage": 1,
-    "max_damage": 1
   }
   
   

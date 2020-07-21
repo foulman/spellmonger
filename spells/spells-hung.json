@@ -2,7 +2,7 @@
   {
     "id": "spm_force_bolt_hang",
     "type": "SPELL",
-    "name": "Hang Forcebolt",
+    "name": "Hang Force bolt",
     "description": "This is the first spell any mage learns, designed to teach them to manipulate magic to accomplish many minor tasks with a minimum of effort.  Eventually this becomes reflexive and you can simply do things at will with no spell casting required, just using background mana.",
     "valid_targets": [ "self" ],
     "effect": "spawn_item",
@@ -22,7 +22,7 @@
   {
     "id": "spm_fire_bolt_hang",
     "type": "SPELL",
-    "name": "Hang Firebolt",
+    "name": "Hang Fire bolt",
     "description": "This is the first spell any mage learns, designed to teach them to manipulate magic to accomplish many minor tasks with a minimum of effort.  Eventually this becomes reflexive and you can simply do things at will with no spell casting required, just using background mana.",
     "valid_targets": [ "self" ],
     "effect": "spawn_item",
@@ -42,7 +42,7 @@
   {
     "id": "spm_shock_bolt_hang",
     "type": "SPELL",
-    "name": "Hang Shockbolt",
+    "name": "Hang Shock bolt",
     "description": "This is the first spell any mage learns, designed to teach them to manipulate magic to accomplish many minor tasks with a minimum of effort.  Eventually this becomes reflexive and you can simply do things at will with no spell casting required, just using background mana.",
     "valid_targets": [ "self" ],
     "effect": "spawn_item",
@@ -72,8 +72,8 @@
 	"skill": "thaumaturgy",
     "base_casting_time": 1500,
     "final_casting_time": 1500,
-    "base_energy_cost": 300,
-    "final_energy_cost": 300,
+    "base_energy_cost": 600,
+    "final_energy_cost": 600,
     "difficulty": 1,
     "max_level": 1,
     "min_damage": 1,
