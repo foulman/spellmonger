@@ -112,7 +112,7 @@
         "spoil_multiplier": 0,
         "weight_multiplier": 0.0,
         "volume_multiplier": 0.0,
-        "rigid": true,
+        "rigid": false,
 		"item_restriction": [ "spm_hung_force_bolt", "spm_hung_str_boost", "spm_hung_fire_bolt", "spm_hung_shock_bolt", "spm_hung_force_bolt_spray", "spm_hung_blackfire_bolt" ]
       }
     ]
