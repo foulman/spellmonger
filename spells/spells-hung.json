@@ -1,8 +1,8 @@
 [
   {
-    "id": "spm_str_boost",
+    "id": "spm_str_boost_hung",
 	"type": "SPELL",
-	"name": "Warmagi Strength Boost",
+	"name": "Strength Boost",
 	"description": "This is a template to show off all the available values",
 	"message": "you draw in power and temporarily use it to enhance your physical strength!  You cast %s!",
 	"valid_targets": [ "self" ],
@@ -22,7 +22,7 @@
 	"max_duration": 90000
   },
   {
-    "id": "spm_shock_bolt",
+    "id": "spm_shock_bolt_hung",
 	"type": "SPELL",
 	"name": "Shock Bolt",
 	"description": "This spell hurls a crackling bolt of electricity at your target.",
@@ -48,7 +48,7 @@
 	"range_increment": 2
   },
   {
-    "id": "spm_fire_bolt",
+    "id": "spm_fire_bolt_hung",
 	"type": "SPELL",
 	"name": "Fire Bolt",
 	"description": "This spell hurls bolts of almost solid fire (plasma) at your target.",
@@ -74,7 +74,7 @@
 	"range_increment": 2
   },
   {
-    "id": "spm_blackfire_bolt",
+    "id": "spm_blackfire_bolt_hung",
 	"type": "SPELL",
 	"name": "Blackfire Bolt",
 	"description": "This spell hurls bolts of almost solid blackfire at your target.",
@@ -107,7 +107,7 @@
 	"range_increment": 2
   },
   {
-    "id": "spm_force_bolt",
+    "id": "spm_force_bolt_hung",
 	"type": "SPELL",
 	"name": "Force Bolt",
 	"description": "This spell hurls invisible bolts of force at your target.",
@@ -133,7 +133,7 @@
 	"range_increment": 2
   },
   {
-    "id": "spm_force_bolt_spray",
+    "id": "spm_force_bolt_spray_hung",
 	"type": "SPELL",
 	"name": "Force Bolt Spray",
 	"description": "This spell hurls invisible bolts of force at your target.",

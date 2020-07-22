@@ -105,7 +105,7 @@
       {
         "pocket_type": "CONTAINER",
         "moves": 1,
-        "max_contains_volume": "10 L",
+        "max_contains_volume": "10 ml",
         "max_contains_weight": "1 kg",
         "max_item_volume": "500 L",
         "max_item_length": "12 meter",
@@ -121,9 +121,9 @@
     "abstract": "spm_hung_spell",
     "type": "COMESTIBLE",
     "name": "hung spell template",
-    "category": "spells",
-	"comestible_type": "food",
-    "volume": "1 L",
+    "category": "TOOL",
+	"comestible_type": "FOOD",
+    "volume": "1 ml",
 	"calories" : 0,
 	"spoils_in": "1 m",
 	"rot_spawn_chance": 100,
@@ -140,7 +140,7 @@
 	"name": { "str": "hung spell - Strength Boost" },
     "description": "A hung spell of Strength Boost.",
     "color": "white",
-    "use_action": { "type": "cast_spell", "spell_id": "spm_str_boost", "no_fail": true, "level": 10, "moves": 200 }
+    "use_action": { "type": "cast_spell", "spell_id": "spm_str_boost_hung", "no_fail": true, "level": 10, "moves": 200 }
   },
   {
     "id": "spm_hung_force_bolt",
@@ -149,7 +149,7 @@
 	"name": { "str": "hung spell - force bolt" },
     "description": "A hung spell of force bolt.",
     "color": "white",
-    "use_action": { "type": "cast_spell", "spell_id": "spm_force_bolt", "no_fail": true, "level": 10, "moves": 100 }
+    "use_action": { "type": "cast_spell", "spell_id": "spm_force_bolt_hung", "no_fail": true, "level": 10, "moves": 100 }
   },
   {
     "id": "spm_hung_fire_bolt",
@@ -158,7 +158,7 @@
 	"name": { "str": "hung spell - fire bolt" },
     "description": "A hung spell of fire bolt.",
     "color": "white",
-    "use_action": { "type": "cast_spell", "spell_id": "spm_fire_bolt", "no_fail": true, "level": 10, "moves": 100 }
+    "use_action": { "type": "cast_spell", "spell_id": "spm_fire_bolt_hung", "no_fail": true, "level": 10, "moves": 100 }
   },
   {
     "id": "spm_hung_shock_bolt",
@@ -167,7 +167,7 @@
 	"name": { "str": "hung spell - shock bolt" },
     "description": "A hung spell of shock bolt.",
     "color": "white",
-    "use_action": { "type": "cast_spell", "spell_id": "spm_shock_bolt", "no_fail": true, "level": 10, "moves": 100 }
+    "use_action": { "type": "cast_spell", "spell_id": "spm_shock_bolt_hung", "no_fail": true, "level": 10, "moves": 100 }
   },
   {
     "id": "spm_hung_force_bolt_spray",
@@ -176,7 +176,7 @@
 	"name": { "str": "hung spell - force bolt spray" },
     "description": "A hung spell of force bolt spray.",
     "color": "white",
-    "use_action": { "type": "cast_spell", "spell_id": "spm_force_bolt_spray", "no_fail": true, "level": 10, "moves": 100 }
+    "use_action": { "type": "cast_spell", "spell_id": "spm_force_bolt_spray_hung", "no_fail": true, "level": 10, "moves": 100 }
   },
   {
     "id": "spm_hung_blackfire_bolt",
@@ -185,7 +185,7 @@
 	"name": { "str": "hung spell - blackfire bolt" },
     "description": "A hung spell of blackfire bolt.",
     "color": "white",
-    "use_action": { "type": "cast_spell", "spell_id": "spm_blackfire_bolt", "no_fail": true, "level": 10, "moves": 100 }
+    "use_action": { "type": "cast_spell", "spell_id": "spm_blackfire_bolt_hung", "no_fail": true, "level": 10, "moves": 100 }
   }
   
 ]
