@@ -161,6 +161,28 @@
 	"min_aoe": 25,
 	"max_aoe": 45,
 	"aoe_increment": 2
+  },
+  {
+    "id": "spm_ward_cutting_hung",
+    "type": "SPELL",
+    "name": "Ward - Cutting",
+    "description": "This creates a ward around your body, protecting you from cuts to a limited degree.",
+    "valid_targets": [ "self" ],
+    "effect": "spawn_item",
+    "effect_str": "spm_ward_cutting_item",
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_FAIL" ],
+    "energy_source": "MANA",
+	"skill": "warding",
+    "base_casting_time": 500,
+    "final_casting_time": 500,
+    "base_energy_cost": 400,
+    "final_energy_cost": 400,
+    "difficulty": 3,
+    "max_level": 10,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_duration": 36000,
+    "max_duration": 36000
   }
 
 

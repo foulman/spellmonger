@@ -186,6 +186,15 @@
     "description": "A hung spell of blackfire bolt.",
     "color": "white",
     "use_action": { "type": "cast_spell", "spell_id": "spm_blackfire_bolt_hung", "no_fail": true, "level": 10, "moves": 100 }
+  },
+  {
+    "id": "spm_hung_ward_cutting",
+    "copy-from": "spm_hung_spell",
+    "type": "COMESTIBLE",
+	"name": { "str": "hung spell - ward against cutting" },
+    "description": "A hung spell of ward against cutting.",
+    "color": "white",
+    "use_action": { "type": "cast_spell", "spell_id": "spm_ward_cutting_hung", "no_fail": true, "level": 10, "moves": 100 }
   }
   
 ]
